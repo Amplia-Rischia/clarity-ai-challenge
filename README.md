@@ -40,6 +40,15 @@ Timestamp            From Host
 2019-08-13 23:59:49  Trestyn
 ```
 
+### Running the tests
+I could not resolve a couple test failures, I may need further time to manage this issue 
+
+In order to test the log_parser_batch script you should just execute the command below:
+
+```
+python test_log_parser_batch.py
+```
+
 ## Exercise 2: [Stream monitoring]
 
 ### Description of my approach and assumptions
