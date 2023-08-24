@@ -15,7 +15,10 @@ This repository contains my solutions for the coding challenge as part of the ap
 ### Dependencies or prerequisites
 
 ### Running the script
-python ex2_script.py
+To use the script with your log file, you can run a command like this in the terminal:
+```
+python log_parser.py log_file.txt "2023-08-01 00:00:00" "2023-08-15 23:59:59" "TargetHostname"
+```
 
 
 
