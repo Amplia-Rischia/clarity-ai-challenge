@@ -59,7 +59,7 @@ To use the script with your log file, you can run a command like this in the ter
 python .\log_parser_streaming.py
 ```
 
-
+The output will be something like
 ```
 Added log entry: 1692917683357 Jahniyah Cassy
 Added log entry: 1692917693358 Leib Cassy
@@ -76,3 +76,7 @@ Report:
 Most common host: Jahniyah
 
 ```
+
+### Running the tests
+
+I would need more time to write the tests for this script
