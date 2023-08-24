@@ -21,7 +21,7 @@ def filter_connections(log_file, init_datetime, end_datetime, target_hostname):
             connection_time = datetime.fromtimestamp(timestamp / 1000)
 
             if init_time <= connection_time <= end_time and destination == target_hostname:
-                connections.append(source)
+                connections.append((connection_time, source))
 
     return connections
 
@@ -38,8 +38,9 @@ if __name__ == "__main__":
     connections = filter_connections(log_file, init_datetime, end_datetime, target_hostname)
 
     if connections:
-        print("Connected to", target_hostname, "during the specified period:")
-        for hostname in connections:
-            print(hostname)
+        print("{:<20} {:<20}".format("Timestamp", "From Host"))
+        print("="*40)
+        for timestamp, hostname in connections:
+            print("{:<20} {:<20}".format(timestamp.strftime('%Y-%m-%d %H:%M:%S'), hostname))
     else:
         print("No connections found for", target_hostname, "during the specified period.")
