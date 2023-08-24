@@ -8,6 +8,7 @@ This repository contains my solutions for the coding challenge as part of the ap
 ## Exercise 1: [Batch monitoring]
 
 ### Description of my approach and assumptions
+- I assume that "CONNECTIONS TO" means that I have to search the target host only in the second host collumn.
 - In case of invalid input provided it is ok to just throw an error and exit
 - No logs file is necessary for the script execution
 - The init_datetime and end_datetime provided as command-line arguments are in the format 'YYYY-MM-DD HH:MM:SS'. For this exercise will not be considered the necesity to handle different formats, providng less flexibility to the user.

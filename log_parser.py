@@ -30,6 +30,7 @@ def filter_connections(connections, init_time, end_time, target_hostname):
 
 def print_connections(connections):
     if connections:
+        print("Printing connections TO the host {} in the period from {} to {}".format(target_hostname, init_time.strftime('%Y-%m-%d %H:%M:%S'), end_time.strftime('%Y-%m-%d %H:%M:%S')))
         print("{:<20} {:<20}".format("Timestamp", "From Host"))
         print("="*40)
         for timestamp, hostname in connections:
