@@ -5,17 +5,16 @@ Hello! I'm Mihail Pascari, and I'm excited to apply for the Data Engineer positi
 
 This repository contains my solutions for the coding challenge as part of the application process. Below, you'll find instructions on how to use the code snippets for the exercises.
 
-## Exercise 1: [Batch monitoring]
-
 ### Description of my approach and assumptions
 - I assume that "CONNECTIONS TO" means that I have to search the target host only in the second host collumn.
 - In case of invalid input provided it is ok to just throw an error and exit
-- No logs file is necessary for the script execution
 - The init_datetime and end_datetime provided as command-line arguments are in the format 'YYYY-MM-DD HH:MM:SS'. For this exercise will not be considered the necesity to handle different formats, providng less flexibility to the user.
 - I am assuming UTC as timezone in which the date_time is provided
 
+## Exercise 1: [Batch monitoring]
+
 ### Dependencies or prerequisites
-Python installed on your OS
+No external dependencies are needed for this module. It utilizes standard Python libraries for file I/O and datetime manipulation.
 
 ### Running the script
 To use the script with your log file, you can run a command like this in the terminal:
@@ -51,9 +50,33 @@ python test_log_parser_batch.py
 
 ## Exercise 2: [Stream monitoring]
 
-### Description of my approach and assumptions
-[Description of the exercise and what the code snippet accomplishes.]
+### Dependencies or prerequisites
+This script uses the functions defined in log_parser_batch.py, plus will invoke as subprocess the script mock_appending.py and additionally requires the datetime module.
 
-### Usage
-1. [Step-by-step instructions on how to set up and run the code snippet.]
-2. [Any dependencies or prerequisites needed before running the code.]
+### Running the script
+To use the script with your log file, you can run a command like this in the terminal:
+```
+python .\log_parser_streaming.py
+```
+
+
+```
+Report:
+Connected hosts to 'Cassy': []
+Most common host: None
+
+Added log entry: 1679796554123 Leib Cassy
+
+Report:
+Connected hosts to 'hostname_to_monitor': [('2023-08-25 12:36:45', 'Leib')]
+Most common host: Leib
+
+Added log entry: 1679796554123 Leib Cassy
+Added log entry: 1679796555123 Bray Madline
+Added log entry: 1679796556123 Debbra Arieal
+
+Report:
+Connected hosts to 'hostname_to_monitor': [('2023-08-25 12:36:55', 'Leib'), ('2023-08-25 12:37:05', 'Bray'), ('2023-08-25 12:37:15', 'Debbra')]
+Most common host: Leib
+
+```
