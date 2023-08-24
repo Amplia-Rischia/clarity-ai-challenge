@@ -61,22 +61,18 @@ python .\log_parser_streaming.py
 
 
 ```
+Added log entry: 1692917683357 Jahniyah Cassy
+Added log entry: 1692917693358 Leib Cassy
+Added log entry: 1692917703360 Jahniyah Cassy
+Added log entry: 1692917713362 Naoya Cassy
 Report:
-Connected hosts to 'Cassy': []
-Most common host: None
-
-Added log entry: 1679796554123 Leib Cassy
-
-Report:
-Connected hosts to 'hostname_to_monitor': [('2023-08-25 12:36:45', 'Leib')]
-Most common host: Leib
-
-Added log entry: 1679796554123 Leib Cassy
-Added log entry: 1679796555123 Bray Madline
-Added log entry: 1679796556123 Debbra Arieal
-
-Report:
-Connected hosts to 'hostname_to_monitor': [('2023-08-25 12:36:55', 'Leib'), ('2023-08-25 12:37:05', 'Bray'), ('2023-08-25 12:37:15', 'Debbra')]
-Most common host: Leib
++-------------------+------------------+
+|     Timestamp     |  Connected Host |
++-------------------+------------------+
+| 2023-08-25 00:54:43 | Jahniyah         |
+| 2023-08-25 00:54:53 | Leib             |
+| 2023-08-25 00:55:03 | Naoya           |
++-------------------+------------------+
+Most common host: Jahniyah
 
 ```
