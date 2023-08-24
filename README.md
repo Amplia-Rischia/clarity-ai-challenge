@@ -8,7 +8,10 @@ This repository contains my solutions for the coding challenge as part of the ap
 ## Exercise 1: [Batch monitoring]
 
 ### Description of my approach and assumptions
-[]
+- In case of invalid input provided it is ok to just throw an error and exit
+- No logs file is necessary for the script execution
+- The init_datetime and end_datetime provided as command-line arguments are in the format 'YYYY-MM-DD HH:MM:SS'. For this exercise will not be considered the necesity to handle different formats, providng less flexibility to the user.
+- I am assuming UTC as timezone in which the date_time is provided
 
 ### Dependencies or prerequisites
 Python installed on your OS
@@ -24,11 +27,16 @@ python log_parser.py .\input-file-10000.txt "2018-08-01 00:00:00" "2019-08-15 23
 ```
 Which will output something like this
 ```
-Timestamp            From Host           
+Timestamp            From Host
 ========================================
-2022-08-01 01:00:00  host1               
-2022-08-01 01:20:00  host2               
-2022-08-01 01:40:00  host3
+2019-08-13 08:02:45  Adalhi
+2019-08-13 09:17:56  Anishka
+2019-08-13 09:56:01  Kya
+2019-08-13 18:14:00  Alexionna
+2019-08-13 19:30:54  Wadie
+2019-08-13 22:29:31  Zyleah
+2019-08-13 22:37:29  Dyshawn
+2019-08-13 23:59:49  Trestyn
 ```
 
 ## Exercise 2: [Stream monitoring]
